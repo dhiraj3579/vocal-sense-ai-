@@ -1,0 +1,8 @@
+{
+  "name": "VocalSense AI",
+  "description": "A Speech Emotion Recognition app that analyzes voice samples to classify emotions like angry, calm, and happy using audio feature extraction and Gemini AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

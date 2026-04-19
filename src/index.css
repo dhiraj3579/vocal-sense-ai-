@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+}
+
+@layer base {
+  :root {
+    --bg: #0B0C10;
+    --surface: #1F2833;
+    --accent: #66FCF1;
+    --accent-dim: #45A29E;
+    --text: #C5C6C7;
+    --text-muted: #8E9299;
+    --danger: #FF4E50;
+    --calm: #56CCF2;
+    --happy: #F2C94C;
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)] font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.header-border {
+  @apply border-b border-[#25262B];
+}
+
+.main-layout-bg {
+  @apply bg-[#25262B];
+}
+
+.widget-container {
+  @apply bg-[var(--bg)] rounded-none overflow-hidden;
+}
+
+.sidebar-container {
+  @apply bg-[var(--surface)] p-10 h-full flex flex-col gap-8;
+}
+
+.section-title {
+  @apply text-[11px] uppercase tracking-[0.2em] text-[var(--text-muted)] font-semibold mb-5;
+}
+
+.status-label {
+  @apply font-mono text-[10px] tracking-widest uppercase text-[var(--text-muted)];
+}
+
+.timer-display {
+  @apply font-mono text-[10px] tracking-widest text-[var(--text-muted)];
+}
+
+.glass-card {
+  @apply bg-white/[0.03] border border-white/[0.05] rounded-xl p-5;
+}
+
+.metric-val {
+  @apply font-mono text-lg text-white;
+}
+
+.metric-label {
+  @apply text-[9px] text-[var(--text-muted)] uppercase tracking-wider;
+}
+
+.tag {
+  @apply border border-[#333] px-2 py-0.5 rounded text-[9px] font-mono text-[var(--text-muted)];
+}
+
+.logo-text {
+  @apply font-mono text-sm tracking-[0.2em] text-[var(--accent)];
+}
+
+.status-dot {
+  @apply w-1.5 h-1.5 bg-[var(--accent)] rounded-full;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.emotion-card {
+  @apply bg-white/[0.03] rounded-xl p-5 border border-white/[0.05];
+}
